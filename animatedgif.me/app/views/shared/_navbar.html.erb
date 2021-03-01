@@ -3,18 +3,22 @@
     <div class="w-full max-w-screen-xl relative mx-auto px-6">
         <div class="flex items-center -mx-6">
             
-            <div class="flex-grow">
-                <div class= "flex items-center">
+            <!-- <div class="flex-grow"> -->
+                <div class= "flex items-center px-6">
 
                     <%= link_to "AnimatedGif.Me", root_path, class: "logo-style" %>
                 
                 </div>
+            <!-- </div> -->
+
+            <div class="flex-grow mr-8">
+               <%= text_field_tag nil, nil, autofocus: true, placeholder: "Search gifs", class: "form-control", data: { controller: "search", action: "keypress@window->search#focus", target: "search.field" } %>
             </div>
 
 
             <%= link_to 'New Gif', new_gif_path, class: "nav-link btn btn-purple" %>
 
-            <div class="border-b border-gray-200 ml-2">
+            <div class="border-b border-gray-200 ml-2 px-6">
 
             
                     
